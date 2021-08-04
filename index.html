@@ -1,172 +1,300 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Melanie Rea's Portfolio</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+    />
     <style>
-        section {
-            padding-top: 40px;
-            padding-bottom: 40px;
-        }
+      section {
+        padding-top: 80px;
+        padding-bottom: 80px;
+      }
 
-        h2 {
-            margin-bottom: 40px;
-            text-align: center;
-        }
+      h2 {
+        margin-bottom: 60px;
+        text-align: center;
+      }
 
-        .hero {
-            padding-top: 50px;
-            padding-bottom: 50px;
-            color: white;
-        }
+      .navbar {
+        position: fixed;
+        width: 100%;
+      }
 
-        .hero h1 {
-            margin-top: 20px;
-        }
+      .navbar .nav-link {
+        font-weight: bold;
+        transition: color 0.2s;
+      }
 
-        .projects {
-            color: white;
-        }
+      .navbar .navbar-nav .nav-link:hover,
+      .navbar .navbar-nav .nav-link:focus,
+      .nav-link.active {
+        color: pink !important;
+      }
 
-        .footer {
-            color: white;
-            padding-top: 80px;
-            padding-bottom: 80px;
-        }
+      .btn-github {
+        background: #24292f;
+        color: white;
+        margin-right: 20px;
+      }
+
+      .btn-linkedin {
+        background: #0a66c2;
+        color: white;
+      }
+
+      .hero {
+        background: url("./assets/img/hero-bg.jpg") no-repeat;
+        background-size: cover;
+        padding-top: 50px;
+        padding-bottom: 50px;
+        color: white;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .hero h1 {
+        font-size: 72px;
+        line-height: 96px;
+      }
+
+      .hero h2 {
+        font-size: 36px;
+        line-height: 48px;
+      }
+
+      .hero h1,
+      .hero h2 {
+        margin-top: 20px;
+        text-shadow: 2px 2px 2px #000000;
+      }
+
+      .avatar {
+        border-radius: 50%;
+        max-height: 150px;
+      }
+
+      .skills img {
+        max-height: 150px;
+      }
+
+      .projects {
+        color: white;
+      }
+
+      .projects img {
+        width: 100%;
+        height: auto;
+      }
+
+      .image-wrapper {
+        width: 100%;
+      }
+
+      .footer {
+        color: white;
+        padding-top: 80px;
+        padding-bottom: 80px;
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <main>
-        <!-- Navigation section -->
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="#">Melanie Rea's Portfolio</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#about">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#projects">Projects</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#contact">Contact</a>
-                    </li>
-                </ul>
-                <div class="d-flex">
-                    <a class="btn btn-info" href="https://github.com/Melaniezrr">GitHub</a>
-                    <a class="btn btn-primary" href="www.linkedin.com/in/melanierr">LinkedIn</a>
-                </div>
-                </div>
+      <!-- Navigation section -->
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+          <a class="navbar-brand" href="#">Melanie Rea: Portfolio</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#about"
+                  >About</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#projects">Projects</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#contact">Contact</a>
+              </li>
+            </ul>
+            <div class="d-flex">
+              <a
+                class="btn btn-info btn-github"
+                href="https://github.com/Melaniezrr"
+                >GitHub</a
+              >
+              <a
+                class="btn btn-info btn-linkedin"
+                href="www.linkedin.com/in/melanierr"
+                >LinkedIn</a
+              >
             </div>
-        </nav>
-        <!-- Hero Section -->
-        <section class="container-fluid bg-primary bg-gradient hero">
-            <div class="container">
-                <div class="row">
-                    <div class="col">
-                        <h1 class="text-center">Melanie Rea's Portfolio</h1>
-                    </div>
-                </div>
+          </div>
+        </div>
+      </nav>
+      <!-- Hero Section -->
+      <section class="container-fluid bg-primary hero">
+        <div class="container">
+          <div class="row">
+            <div class="col">
+              <h1 class="text-center">Melanie Rea</h1>
+              <h2 class="text-center">Software Developer</h2>
             </div>
-        </section>
-        <!-- END Hero Section -->
+          </div>
+        </div>
+      </section>
+      <!-- END Hero Section -->
 
-        <!-- About Me -->
-        <section class="container" id="about">
+      <!-- About Me -->
+      <section class="container" id="about">
+        <div class="row">
+          <div class="col">
+            <h2>About Me</h2>
+          </div>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-md-6">
             <div class="row">
-                <div class="col">
-                    <h2>About Me</h2>
-                </div>
+              <div class="col-md-4">
+                <img class="avatar" src="./assets/img/avatar.jfif" />
+              </div>
+              <div class="col-md-8">
+                <p>
+                  Hi! I'm Melanie Rea. I am a former health care worker turned
+                  Software Developer with experience in HTML/CSS/JS and
+                  C#/Entity Framework. I am currently interested in JavaScript
+                  frameworks such as React and am interested in learning more
+                  about the cloud.
+                </p>
+              </div>
             </div>
-            <div class="row justify-content-center">
-                <div class="col-md-6">
-                    <p>This is about me section.  I will talk about my background</p>
-                </div>
-                <div class="col-md-6">
-                    <ul>
-                        <li>HTML</li>
-                        <li>CSS</li>
-                        <li>JavaScript</li>
-                        <li>C#</li>
-                        <li>Entity Framework</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-        <!-- End About Me -->
-
-        <!-- Projects Section -->
-        <section class="container-fluid bg-dark projects" id="projects">
-            <div class="container">
-                <div class="row">
-                    <div class="col">
-                        <h2>Projects</h2>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-4">
-                        <p class="text-center">Project 1</p>
-                    </div>
-                    <div class="col-md-4">
-                        <p class="text-center">Project 2</p>
-                    </div>
-                    <div class="col-md-4">
-                        <p class="text-center">Project 3</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- End Projects Section -->
-
-        <!-- Contact Section -->
-        <section class="container" id="contact">
+          </div>
+          <div class="col-md-6 skills">
             <div class="row">
-                <div class="col">
-                    <h2>Contact</h2>
-                </div>
+              <div class="col-md-3">
+                <img src="./assets/img/html.png" />
+              </div>
+              <div class="col-md-3">
+                <img src="./assets/img/css.png" />
+              </div>
+              <div class="col-md-3">
+                <img src="./assets/img/javascript.png" />
+              </div>
+              <div class="col-md-3">
+                <img src="./assets/img/Csharp.png" />
+              </div>
             </div>
-            <div class="row justify-content-center">
-                <div class="col-md-6">
-                    <form
-                        action="https://formspree.io/f/xzbyjvow"
-                        method="POST"
-                        >
-                        <div class="mb-3">
-                            <label class="form-label">Your email:</label>
-                            <input class="form-control" type="email" name="_replyto">
-                        </div>
-                        <div class="mb-3">
-                            <label class="form-label">Your message:</label>
-                            <textarea class="form-control" name="message"></textarea>
-                        </div>
+          </div>
+        </div>
+      </section>
+      <!-- End About Me -->
 
-                        <button class="btn btn-primary" type="submit">Send</button>
-                    </form>
-                </div>
+      <!-- Projects Section -->
+      <section class="container-fluid bg-dark projects" id="projects">
+        <div class="container">
+          <div class="row">
+            <div class="col">
+              <h2>Projects</h2>
             </div>
-        </section>
-        <!-- End Contact Section -->
-
-        <!-- Footer Section -->
-        <footer class="container-fluid bg-dark bg-gradient footer">
-            <div class="container">
-                <div class="row">
-                    <div class="col text-center">
-                        <p>&copy; Copyright 2021 - Melanie Rea</p>
-                    </div>
-                </div>
+          </div>
+          <div class="row">
+            <div class="col-md-4">
+              <p class="text-center"><strong>CSS Creature</strong></p>
+              <p>
+                For this project, I recreated Micky Mouse using only HTML and
+                CSS. The project was challenging due to lining up the elements
+                using the position attributes.
+              </p>
+              <div class="image-wrapper">
+                <img src="assets/img/css-creature.PNG" />
+              </div>
             </div>
-        </footer>
-        <!-- End Footer Section -->
+            <div class="col-md-4">
+              <p class="text-center"><strong>Dev Team Manager</strong></p>
+              <p>
+                The Dev Team Manager is a console application written in C#. It
+                provides CRUD options for Dev Teams as well as Developers.
+              </p>
+              <div class="image-wrapper">
+                <img src="assets/img/devteammanager.PNG" />
+              </div>
+            </div>
+            <div class="col-md-4">
+              <p class="text-center"><strong>Contract Now</strong></p>
+              <p>
+                Contract Now is a contractor marketplace. It is an API built
+                with Entity Framework. It provides CRUD endpoints for
+                Categories, Contractors, and Jobs.
+              </p>
+              <div class="image-wrapper">
+                <img src="assets/img/ContractIt.PNG" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- End Projects Section -->
 
+      <!-- Contact Section -->
+      <section class="container" id="contact">
+        <div class="row">
+          <div class="col">
+            <h2>Contact</h2>
+          </div>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-md-6">
+            <p class="text-center">
+              Could I help your team with a project? Use the form below to
+              submit a message and I'll get back to you as soon as I can!
+            </p>
+            <form action="https://formspree.io/f/xzbyjvow" method="POST">
+              <div class="mb-3">
+                <label class="form-label">Your email:</label>
+                <input class="form-control" type="email" name="_replyto" />
+              </div>
+              <div class="mb-3">
+                <label class="form-label">Your message:</label>
+                <textarea class="form-control" name="message"></textarea>
+              </div>
+
+              <button class="btn btn-primary" type="submit">Reach Out!</button>
+            </form>
+          </div>
+        </div>
+      </section>
+      <!-- End Contact Section -->
+
+      <!-- Footer Section -->
+      <footer class="container-fluid bg-dark bg-gradient footer">
+        <div class="container">
+          <div class="row">
+            <div class="col text-center">
+              <p>&copy; Copyright 2021 - Melanie Rea</p>
+            </div>
+          </div>
+        </div>
+      </footer>
+      <!-- End Footer Section -->
     </main>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"></script>
-</body>
+  </body>
 </html>
