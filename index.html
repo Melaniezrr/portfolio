@@ -85,8 +85,18 @@
         max-height: 150px;
       }
 
+      .avatar-wrapper {
+        text-align: center;
+        margin-bottom: 20px;
+      }
+
+      .skills {
+        text-align: center;
+      }
+
       .skills img {
         max-height: 150px;
+        margin-bottom: 20px;
       }
 
       .projects {
@@ -98,8 +108,30 @@
         height: auto;
       }
 
+      .project-showcase {
+        margin-bottom: 100px;
+      }
+
+      .project-showcase a { 
+        color: aquamarine;
+        transition: all 0.2s ease-in-out;
+      }
+
+      .project-showcase a:hover { 
+        color: rgb(8, 250, 169);
+        transition: all 0.2s ease-in-out;
+      }
+
+      .project-card {
+        margin-bottom: 50px;
+      }
+
       .image-wrapper {
         width: 100%;
+      }
+
+      #contact {
+        background: aquamarine;
       }
 
       .footer {
@@ -183,7 +215,7 @@
         <div class="row justify-content-center">
           <div class="col-md-6">
             <div class="row">
-              <div class="col-md-4">
+              <div class="col-md-4 avatar-wrapper">
                 <img class="avatar" src="./assets/img/avatar.jfif" />
               </div>
               <div class="col-md-8">
@@ -225,9 +257,26 @@
               <h2>Projects</h2>
             </div>
           </div>
+          <div class="row project-showcase">
+            <div class="col-md-6">
+              <h3>
+                <a href="https://petmedicalrecords.azurewebsites.net/"
+                  >Pet Medical Records</a
+                >
+              </h4>
+              <h3>Full Stack MVC Application</h3>
+              <p>
+                Pet Medical Records (PMR) is a system where an owner can create
+                clinics, pets, and records to store their pet's vaccine
+                information. This is useful for pet parents who need to board
+                their pets, take them to pet day care, or to a new groomer.
+              </p>
+            </div>
+            <div class="col-md-6"><img src="assets/img/PMR.PNG"/></div>
+          </div>
           <div class="row">
-            <div class="col-md-4">
-              <p class="text-center"><strong>CSS Creature</strong></p>
+            <div class="col-md-4 project-card">
+              <h3 class="text-center"><strong>CSS Creature</strong></h3>
               <p>
                 For this project, I recreated Micky Mouse using only HTML and
                 CSS. The project was challenging due to lining up the elements
@@ -241,8 +290,8 @@
                 /></a>
               </div>
             </div>
-            <div class="col-md-4">
-              <p class="text-center"><strong>Dev Team Manager</strong></p>
+            <div class="col-md-4 project-card">
+              <h3 class="text-center"><strong>Dev Team Manager</strong></h3>
               <p>
                 The Dev Team Manager is a console application written in C#. It
                 provides CRUD options for Dev Teams as well as Developers.
@@ -255,8 +304,8 @@
                 /></a>
               </div>
             </div>
-            <div class="col-md-4">
-              <p class="text-center"><strong>Contract Now</strong></p>
+            <div class="col-md-4 project-card">
+              <h3 class="text-center"><strong>Contract Now</strong></h3>
               <p>
                 Contract Now is a contractor marketplace. It is an API built
                 with Entity Framework. It provides CRUD endpoints for
@@ -274,7 +323,7 @@
       <!-- End Projects Section -->
 
       <!-- Contact Section -->
-      <section class="container" id="contact">
+      <section class="container-fluid" id="contact">
         <div class="row">
           <div class="col">
             <h2>Contact</h2>
@@ -282,18 +331,18 @@
         </div>
         <div class="row justify-content-center">
           <div class="col-md-6">
-            <p class="text-center">
+            <p class="text-center"><strong>
               Could I help your team with a project? Use the form below to
               submit a message and I'll get back to you as soon as I can!
-            </p>
+            </strong></p>
             <form action="https://formspree.io/f/xzbyjvow" method="POST">
               <div class="mb-3">
                 <label class="form-label">Your email:</label>
-                <input class="form-control" type="email" name="_replyto" />
+                <input class="form-control" type="email" name="_replyto" placeholder="test@example.com" />
               </div>
               <div class="mb-3">
                 <label class="form-label">Your message:</label>
-                <textarea class="form-control" name="message"></textarea>
+                <textarea class="form-control" name="message" placeholder="Tell me how I can help you!"></textarea>
               </div>
 
               <button class="btn btn-primary" type="submit">Reach Out!</button>
